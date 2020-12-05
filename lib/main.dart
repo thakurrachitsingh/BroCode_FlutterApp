@@ -1,4 +1,4 @@
-import 'package:BroCode_FlutterApp/splash_screen.dart';
+import 'package:BroCode_FlutterApp/Screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

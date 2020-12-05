@@ -1,6 +1,5 @@
 import 'dart:async';
-
-import 'package:BroCode_FlutterApp/registration_screen.dart';
+import 'package:BroCode_FlutterApp/Screen/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Timer(Duration(seconds: 3), () {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return RegistrationScreen();
+        return WelcomeScreen();
       }));
     });
     super.initState();
