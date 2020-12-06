@@ -1,3 +1,4 @@
+import 'package:BroCode_FlutterApp/Page/phone_verification_page.dart';
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_picker_dialog.dart';
 import 'package:country_pickers/utils/utils.dart';
@@ -50,7 +51,51 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 14.0),
                 child: Row(
-                  children: [Container()],
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 42,
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(width: 1.50, color: Colors.green),
+                        ),
+                      ),
+                      child: Text(
+                        "${_selectedFilteredDialogCountry.phoneCode}",
+                        style: TextStyle(fontSize: 15.0),
+                      ),
+                    ),
+                    SizedBox(width: 10.0),
+                    Expanded(
+                      child: Container(
+                        height: 42.0,
+                        child: TextField(
+                          onTap: () {},
+                          decoration: InputDecoration(
+                            hintText: "Phone Number",
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  alignment: Alignment.bottomCenter,
+                  child: MaterialButton(
+                      color: Colors.green,
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return PhoneVerificationPage();
+                          },
+                        ));
+                      },
+                      child: Text("Next",
+                          style:
+                              TextStyle(fontSize: 18.0, color: Colors.white))),
                 ),
               ),
             ],
